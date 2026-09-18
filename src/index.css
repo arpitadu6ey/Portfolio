@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Tailwind CSS v4 directive; ignored by generic CSS linters. */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme inline {
+  --color-canvas: var(--color-canvas);
+  --color-surface: var(--color-surface);
+  --color-editor: var(--color-editor);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-line: var(--color-line);
+  --color-accent: var(--color-accent);
+  --color-accent-ink: var(--color-accent-ink);
+  --color-green: var(--color-green);
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-editor: 0 30px 60px -20px var(--shadow);
+}
+
+:root {
+  --color-canvas: #16141f;
+  --color-surface: #1e1b2b;
+  --color-editor: #100e18;
+  --color-ink: #eae6f5;
+  --color-muted: #948fb0;
+  --color-line: #2e293d;
+  --color-accent: #ffb454;
+  --color-accent-ink: #231a08;
+  --color-green: #7edba3;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme='light'] {
+  --color-canvas: #f7f5f0;
+  --color-surface: #edeae1;
+  --color-editor: #ffffff;
+  --color-ink: #221f2b;
+  --color-muted: #6b6678;
+  --color-line: #ddd8cc;
+  --color-accent: #c87a1e;
+  --color-accent-ink: #fffaf0;
+  --color-green: #2f8f5b;
+  --shadow: rgba(34, 31, 43, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* subtle grid texture used behind project media panels */
+.grid-texture {
+  background-image: repeating-linear-gradient(
+      90deg,
+      rgba(255, 180, 84, 0.05) 0 1px,
+      transparent 1px 40px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 180, 84, 0.05) 0 1px,
+      transparent 1px 40px
+    );
+}
