@@ -31,7 +31,7 @@ export default function Hero() {
               View projects
             </motion.a>
             <motion.a
-              href="/Arpita-Dubey.pdf"
+              href={`${import.meta.env.BASE_URL}Arpita-Dubey.pdf`}
               download="Arpita-Dubey.pdf"
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center justify-center gap-2 rounded-md border border-line px-5.5 py-3 text-sm font-medium hover:border-muted"
